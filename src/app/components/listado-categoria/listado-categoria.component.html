@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Listado</h1>
+    <form class="example-form">
+        
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Search Cocktel</mat-label>
+          <input matInput placeholder="Letter or word..."
+          (ngModelChange)="search($event)"
+          name="src"
+          [(ngModel)]="src">
+          
+          
+        </mat-form-field>
+      </form>
+     
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+     
+        <mat-card *ngFor="let item of categoria | async" (click)=verDetail(item.idDrink)>
+            {{item.strDrink}}
+            <img src={{item.strDrinkThumb}} alt="" >
+             
+        </mat-card>
+</div>
+
+

@@ -1,0 +1,16 @@
+
+.sidenav {
+  top:100px !important;
+  width: 200px;
+}
+
+
+
+.mat-toolbar {
+  position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  width: 100% !important;
+}

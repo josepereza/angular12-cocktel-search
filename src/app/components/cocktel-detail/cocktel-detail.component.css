@@ -1,0 +1,39 @@
+.titulo{
+    text-align: center;
+}
+.grid-container{
+    
+    width: 90%;
+    
+    justify-content: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 20px;
+}
+.datos{
+    margin-top: 10%;
+}
+#detalles{    
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.imagen{
+   margin-top: 10%;
+
+}
+img {
+    width:100%;
+}
+@media screen and (max-width: 600px) {
+    .grid-container{
+    
+        width: 95%;
+        
+        justify-content: center;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column-gap: 20px;
+    }
+  }

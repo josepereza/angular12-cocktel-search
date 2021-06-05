@@ -1,0 +1,43 @@
+<div class="titulo">
+    <h2>{{detalle.drinks[0].strDrink}}</h2>
+
+</div>
+<div class="grid-container">
+
+    <div class="datos">
+  <ul id="detalles">
+      <li>{{detalle.drinks[0].strDrink}}</li>
+      <li>{{detalle.drinks[0].strAlcoholic}}</li>
+      <li>{{detalle.drinks[0].strGlass}}</li>
+      <li>Instrucciones :<span style="font-weight: 125;">{{detalle.drinks[0].strInstructions}}</span></li>
+   
+    </ul>
+    <h3>INGREDIENTES :</h3>
+    <ul>
+        <li *ngIf=detalle.drinks[0].strIngredient1>{{detalle.drinks[0].strIngredient1}}</li>
+        
+        <li *ngIf=detalle.drinks[0].strIngredient2>{{detalle.drinks[0].strIngredient2}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient3>{{detalle.drinks[0].strIngredient3}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient4>{{detalle.drinks[0].strIngredient4}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient5>{{detalle.drinks[0].strIngredient5}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient6>{{detalle.drinks[0].strIngredient6}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient7>{{detalle.drinks[0].strIngredient7}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient8>{{detalle.drinks[0].strIngredient8}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient9>{{detalle.drinks[0].strIngredient9}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient10>{{detalle.drinks[0].strIngredient10}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient11>{{detalle.drinks[0].strIngredient11}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient12>{{detalle.drinks[0].strIngredient12}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient13>{{detalle.drinks[0].strIngredient13}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient14>{{detalle.drinks[0].strIngredient14}}</li>
+        <li *ngIf=detalle.drinks[0].strIngredient15>{{detalle.drinks[0].strIngredient15}}</li>
+
+    </ul>
+    </div>
+    <div class="imagen">
+<img src={{detalle.drinks[0].strDrinkThumb}} alt="">
+    </div>
+    <a mat-raised-button color="primary" [routerLink]="['/intro']" >Regresar</a>
+
+</div>
+
+
