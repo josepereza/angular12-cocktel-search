@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class ListadoCategoriaComponent implements OnInit {
   src:string=""
 isLoading:boolean=false;
-categoria!:any
+listado!:any
   constructor(private cocktelService:CocktelService,private route: ActivatedRoute,
     private router: Router, ) { }
 
@@ -23,7 +23,7 @@ categoria!:any
     //   )
     // .subscribe((data:any)=>this.categoria=data.drinks)
   
-    this.categoria= this.route.paramMap.pipe(tap(()=>this.isLoading=true),
+    this.listado= this.route.paramMap.pipe(tap(()=>this.isLoading=true),
       switchMap((params: ParamMap) =>this.cocktelService.getListadoCategoria(params.get('categoria'))
      
       ),map((data:any)=>data.drinks),tap(()=>this.isLoading=false)
@@ -35,12 +35,12 @@ categoria!:any
    }
  search(event:any){
   this.isLoading = true; 
-  this.categoria= this.route.paramMap.pipe(
+  this.listado= this.route.paramMap.pipe(
     debounceTime(500),
     distinctUntilChanged(),
     switchMap((params: ParamMap) =>this.cocktelService.getListadoCategoria(params.get('categoria'))
    
-    ),map((data:any)=>data.drinks.filter((data:any)=>data.strDrink.includes(event))),
+    ),map((data:any)=>data.drinks.filter((data:any)=>data.strDrink.toLowerCase().includes(event.toLowerCase()))),
    
     tap(()=>this.isLoading=false)
     )

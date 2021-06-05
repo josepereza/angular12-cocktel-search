@@ -17,7 +17,7 @@
       <mat-spinner *ngIf="isLoading"></mat-spinner>
 
      
-        <mat-card *ngFor="let item of categoria | async" (click)=verDetail(item.idDrink)>
+        <mat-card *ngFor="let item of listado | async" (click)=verDetail(item.idDrink)>
             {{item.strDrink}}
             <img src={{item.strDrinkThumb}} alt="" >
              
