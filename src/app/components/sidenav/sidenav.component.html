@@ -7,7 +7,7 @@
    >
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
-  <span>cocktel</span>
+  <span>Cocktel</span>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
@@ -15,7 +15,7 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-nav-list>
-      <a *ngFor="let item of categorias" mat-list-item [routerLink]="['/listadoCategoria', item.strCategory]">{{item.strCategory}}</a>
+      <a  *ngFor="let item of categorias" mat-list-item [routerLink]="['/listadoCategoria', item.strCategory]">{{item.strCategory}}</a>
       
     </mat-nav-list>
   </mat-sidenav>

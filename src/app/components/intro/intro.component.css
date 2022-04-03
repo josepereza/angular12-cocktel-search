@@ -10,9 +10,24 @@
     top:140px;
     left:100px;
     color:white;
-    
+    font-family: 'Sedgwick Ave', cursive;
     font-weight: 500;
 }
 h2{
-    font-size: 2em;
+    font-size: 4em;
+    font-family: 'Sedgwick Ave', cursive;
 }
+@media screen and (max-width: 600px) {
+    .cartel{
+        position:absolute;
+        top:140px;
+        left:50px;
+        color:white;
+        font-family: 'Sedgwick Ave', cursive;
+        font-weight: 500;
+    }
+    h2{
+        font-size: 2.5em;
+        font-family: 'Sedgwick Ave', cursive;
+    }
+  }
